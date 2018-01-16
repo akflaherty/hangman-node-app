@@ -1,0 +1,22 @@
+{
+  "name": "hangman-node-app",
+  "version": "1.0.0",
+  "description": "Hangman game for node.js",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akflaherty/hangman-node-app.git"
+  },
+  "author": "Anne Flaherty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akflaherty/hangman-node-app/issues"
+  },
+  "homepage": "https://github.com/akflaherty/hangman-node-app#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
