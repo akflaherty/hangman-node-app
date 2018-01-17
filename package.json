@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/akflaherty/hangman-node-app#readme",
   "dependencies": {
-    "prompt": "^1.0.0"
+    "inquirer": "^5.0.0"
   }
 }
