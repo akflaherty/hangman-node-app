@@ -24,15 +24,17 @@ function promptLetter() {
     }).then(function(inquirerResponse) {
         wordObj.checkLetters(inquirerResponse.letterGuess);
         // wordObj.trysLeft = wordObj.trysLeft - 1;
+        console.log('');
         console.log('Guesses remaining: ' + wordObj.trysLeft);
         wordObj.dispLetters();
+        wordObj.trysLeft = wordObj.trysLeft - 1;
         if (wordObj.lettersLeft == 0) {
             console.log('WINNER');
-            newGame();
+            promptNewGame();
             return;
         } else if (wordObj.trysLeft <= 0) {
             console.log('LOSER');
-            newGame();
+            promptNewGame();
             return;
         } else {
             promptLetter();
@@ -40,4 +42,18 @@ function promptLetter() {
     });
 }
 
-newGame();
+function promptNewGame() {
+	inquirer.prompt({
+		type: 'confirm',
+		message: 'Start a new game?',
+		name: 'inputContinue'
+	}).then(function(response) {
+		// console.log(response.inputContinue);
+		if (response.inputContinue) {
+			newGame();
+		}
+	});
+}
+
+// newGame();
+promptNewGame();
